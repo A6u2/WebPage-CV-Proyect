@@ -4,63 +4,177 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/6614/6614677.png">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/1250/1250696.png">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <title>Curriculum Vitae</title>
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/a541c0f75d.js" crossorigin="anonymous"></script>
+    <!-- ANIMATE.CSS -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>CV Website</title>
     
 </head>
-<body id="page-top">
-    <!-- Header/Navbar: Encontraremos los hipervínculos para los botones "Inicio", "Sobre Mi" y "Contacto". La página se regirá en inglés originalmente-->
-    <nav>
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-md-auto">
-                    <a id="porfolio_id" class="btn btn-primary" href="#page-top" role="button">Portfolio</a>
-                </div>
-
-                <div class="col-md-auto">
-                    <a id="home_id" class="btn btn-primary" href="#home" role="button">Home</a>
-                </div>
-
-                <div class="col-md-auto">
-                    <a id="about_id" class="btn btn-primary" href="#about" role="button">About</a>
-                </div>
-
-                <div class="col-md-auto">
-                    <a id="contact_id" class="btn btn-primary" href="#contact_me" role="button">Contact me!</a>
-                </div>
-            </div>
+<body>
+    <!-- Header/Navbar: Encontraremos los hipervínculos para los botones "Home", "About" y "Contact me!". La página se regirá en inglés originalmente-->
+    <nav class="navbar">
+        <a href="#page-top" class="logo">CV <i class="fa-solid fa-code"></i></a>
+        <div class="nav-links">
+            <ul>
+                <li class="active"><a href="#principal">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact-me">Contact me!</a></li>
+            </ul>
         </div>
+        <img src="img/menu-btn.png" alt="menu hamburger" class="menu-hamburger">
     </nav>
-    <!--Center: Encontraremos el nombre completo del autor del CV con su profesión debajo de su nombre-->
-    <div class="name profession">
-        <h1>NOMBRE COMPLETO</h1>
-        <h2>Profesión y puesto específico</h2>
+
+    <header></header>   
+
+<!--Center: Encontraremos el nombre completo del autor del CV con su profesión debajo de su nombre-->
+    <section id="principal">
+        <div class="center-titles">
+            <h1>Powell Finnwood</h1>
+            <h2>Sales Executive - Financial Boss</h2>
+        </div>
+
+        <!--Photo: Encontraremos la foto del autor en cuestión-->
+        <div class="photo">
+            <img src="img/cv-photo.jpg" alt="photo of the applicant">
+        </div>
+
+        <div class="social-networks">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+   
+    </section>
+
+<!-- Sección de JavaScript para el diseño responsivo:
+        -Permite que el usuario pueda acceder al menú clickeando sobre su respectivo ícono en dispostivos width: <900px, y que no aparezca inmediatamente por default -->
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+
+    <script>
+        const nav = document.querySelector(".navbar");
+
+            window.addEventListener('scroll', function(){
+                nav.classList.toggle ("active",window.scrollY > 0 )
+        })
+    </script>
+
+    <div class="scrol">
+        
     </div>
-    
-    <!--Photo: Encontraremos la foto del autor en cuestión-->
-    <div class="text-center">
-        <img src="https://cdn-images.livecareer.es/pages/foto_cv_lc_es_4.jpg" class="rounded" alt="Front picture of a white, tall and good-looking man in suit"
-        width="300px" height="300px">
-      </div>
+
 
     <!--HIPERVÍNCULOS-->
-    <!--Sección "Home"-->
-    <section id="home">
-
-    </section>
-
     <!--Sección "About"-->
     <section id="about">
+        <h2 class="section-title">About <i class="fa-regular fa-address-card"></i></h2>
+            <div class="information">
+                <h4 class="h4-title">Birth date</h4>
+                    <p>03/10/1991</p>
+                <h4 class="h4-title">Experience</h4>
+                    <ul class="list">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laudantium, sint voluptas in id minus repudiandae nulla animi accusantium tenetur nesciunt accusamus, quaerat quis voluptates asperiores quas et, fugiat esse?</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eaque necessitatibus officiis cum deleniti</li>
+                    </ul>
+                <h4 class="h4-title">Studies</h4>
+                    <ul class="list">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis itaque esse quasi tempora natus</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis repudiandae veniam praesentium eius</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis tempora amet soluta cumque</li>
+                    </ul>
+                <h4 class="h4-title">Languages</h4>
+                    <ul class="list">
+                        <li>Lorem, ipsum.</li>
+                        <li>Lorem, ipsum.</li>
+                        <li>Lorem, ipsum.</li>
+                    </ul>
+                <h4 class="h4-title">Courses & Certifications</h4>
+                    <ul class="list">
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul> 
+            </div>
 
+            <div class="pdf-download">
+                <a href="/pdf/PDF-CV.pdf" target="_blank">Download my CV in PDF!</a>   
+            </div>
     </section>
 
-    <!--Sección "Contact me!"-->
-    <section id="contact_me">
+<br>
+<br>
+<br>
+    <!--Sección "Contact me! - Sólo es una plantilla, no tiene funcionamiento en si, ya que no está asociado a un código de servidor"-->
+    <section id="contact-me">
+        <div class="content">
+            <h3 class="logo-contact-me"><i class="fa-regular fa-envelope"></i></i>        Contact <span>me</span></h3>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h1>Contact me!</h1>
+                    <form>
+                        <p>
+                            <label>Full Name</label>
+                            <input type="text" name="fullname">
 
+                        </p>
+                        <p>
+                            <label>Email Adress</label>
+                            <input type="email" name="email">
+                        </p>
+                        <p>
+                            <label>Phone</label>
+                            <input type="tel" name="phone">
+                        </p>
+                        <p>
+                            <label>Affair</label>
+                            <input type="text" name="affair">
+                        </p>
+                        <p class="block">
+                            <label>Message</label>
+                            <textarea name="message" rows="3"></textarea>
+                        </p>
+                        <p class="block">
+                            <button type="submit">
+                                Send
+                            </button>
+                        </p>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                        <h4>More Info</h4>
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i> Baker Street 5085, UK</li>
+                            <li><i class="fa-solid fa-phone"></i> 123-456-7890</li>
+                            <li><i class="fa-solid fa-envelope"></i> hello@reallygreatsite.com</li>
+                        </ul>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem debitis quae non quos est ex quod cupiditate voluptatibus impedit qui!
+                        </p>
+                        <p>2023 Portfolio</p>
+                </div>
+            </div>
+
+        </div>
     </section>
-
-
 
 </body>
+
 </html>
