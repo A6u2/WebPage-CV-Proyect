@@ -266,8 +266,6 @@ body {
     padding: 1em;
 }
 
-
-
 .contact-form form{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -327,6 +325,8 @@ body {
 .contact-info ul li{
     padding: .3em;
 }
+
+
 /* ---- En esta sección se realizará el DISEÑO RESPONSIVO para dispositivos móviles---- */
 @media screen and (max-width: 900px) {
 
